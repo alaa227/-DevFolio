@@ -1,0 +1,436 @@
+/* &######################################## */
+/* &########### General Styles ############# */
+/* &######################################## */
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+html {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+
+
+body {
+    margin: 0;
+    font-family: "Open Sans", sans-serif;
+    text-transform: capitalize;
+    height: 999px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    /* font-family: "Nunito", sans-serif; */
+    margin: 0;
+}
+
+img {
+    width: 100%;
+
+}
+
+.immg {
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a,
+span {
+    display: inline-block;
+}
+
+img {
+    display: block;
+}
+
+/* ~=======> root */
+:root {
+    --main: #0078ff;
+}
+
+.bg-blu {
+    background-color: var(--main);
+}
+
+.colo-blu {
+    color: #0078ff;
+}
+
+.colo-gry {
+    color: rgb(121, 119, 119);
+}
+
+::selection {
+    background-color: var(--selection-red);
+    color: var(--main-white);
+}
+
+.fs-s {
+    font-size: small;
+}
+
+/* ^######################################## */
+/* ^############ Navbar Styles ############# */
+/* ^######################################## */
+/* ************************* */
+
+.test {
+    position: relative;
+}
+
+.test ul {
+    background-color: #ebeced;
+    border-radius: 5px;
+    position: absolute;
+    left: -220px;
+    opacity: 0;
+    padding: 10px;
+}
+
+.test:hover ul {
+    opacity: 1;
+}
+
+/*! ------------ */
+.testt {
+    position: relative;
+}
+
+.testt .lok {
+    padding: 10px;
+    background-color: #ebeced;
+    border-radius: 5px;
+    position: absolute;
+    /* left: -230px; */
+    opacity: 0;
+}
+
+.testt:hover .lok {
+    opacity: 1;
+}
+
+/* ************************* */
+.navbar-brand {
+    --bs-navbar-brand-color: #fff;
+    --bs-navbar-brand-hover-color: #fff;
+}
+
+.navbar-nav {
+    --bs-nav-link-color: #fff;
+    --bs-nav-link-hover-color: #fff;
+    --bs-navbar-active-color: #fff;
+    /* --bs-navbar-nav-link-padding-x: 0; */
+}
+
+.navbar .nav-link {
+    position: relative;
+}
+
+.navbar .nav-link::before {
+    content: "";
+    width: 0%;
+    height: 1.3px;
+    background-color: #fff;
+    position: absolute;
+    left: 9px;
+    bottom: 9px;
+    transition: width 400ms;
+}
+
+.navbar .nav-link:hover::before,
+.navbar .nav-link.active::before {
+    width: 60%;
+}
+
+
+/* ^######################################## */
+.hero h2 {
+    font-size: 4.23rem;
+}
+
+.bg-image {
+
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center center;
+}
+
+@media (max-width: 1024px) {
+    .bg-image {
+        background-attachment: scroll;
+    }
+
+    .hero h2 {
+        font-size: 3.375rem;
+        padding: .625rem;
+    }
+}
+
+/* ^############## About-me ########################## */
+.About-me {
+    background-color: #f5f5f5;
+
+    .caard {
+        background-color: #fff;
+
+    }
+
+    li {
+        color: rgb(121, 119, 119);
+    }
+
+    .title {
+        font-weight: bold;
+        color: black;
+    }
+
+    .ttitle::after {
+        content: " ";
+        position: absolute;
+        width: 25%;
+        height: 3px;
+        bottom: -8px;
+        background-color: #0078ff;
+        left: 0px;
+        color: #0078ff;
+    }
+}
+
+/* ^############## SERVICE ########################## */
+.SERVICE {
+    background-color: #f5f5f5;
+
+    .title {
+        font-weight: bold;
+        color: black;
+    }
+
+    .ttitle::after {
+        content: " ";
+        position: absolute;
+        width: 5%;
+        height: 5px;
+        bottom: -8px;
+        background-color: #0078ff;
+        left: 50%;
+        transform: translateX(-50%);
+        color: #0078ff;
+    }
+
+}
+
+/*--------------------------------------------------------------
+# Services
+--------------------------------------------------------------*/
+.bg-gray {
+    background-color: #f5f5f5;
+}
+
+.service-box {
+    box-shadow: 0 13px 8px -10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    padding: 2.5rem 1.3rem;
+    border-radius: 1rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.service-box:hover .ico-circle {
+    transition: all 500ms ease;
+    color: #fff;
+    background-color: #0078ff;
+    box-shadow: 0 0 0 10px #cde1f8;
+}
+
+.service-box .service-ico {
+    margin-bottom: 1rem;
+    color: #1e1e1e;
+}
+
+.service-box .ico-circle {
+    width: 100px;
+    height: 100px;
+    border: #0078ff solid 5px;
+    border-radius: 50%;
+    transition: all 500ms ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.service-box .ico-circle i {
+    line-height: 0;
+    font-size: 40px;
+}
+
+.service-box .s-title {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 0.4rem 0;
+}
+
+.service-box .s-description {
+    color: #4e4e4e;
+}
+
+.ci {
+    width: 100px;
+    height: 100px;
+    padding-top: 25px;
+    text-align: center;
+    font-size: larger;
+    border: solid 10px #e3e6ea;
+}
+
+.h-md-50 {
+    height: 140vh;
+}
+
+@media (min-width: 768px) {
+    .h-md-50 {
+        height: 60vh;
+    }
+}
+
+/* ^############## portofolio ########################## */
+.box {
+    overflow: hidden;
+
+}
+
+.box img:hover {
+    scale: 1.5;
+}
+
+.work-img {
+    display: block;
+    overflow: hidden;
+}
+
+.add {
+    color: #0078ff;
+    border: #0078ff solid 3px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+
+}
+
+/* ^############## sec-titel########################## */
+.sec-titel {
+
+    padding: 40px;
+    position: relative;
+
+    h2 {
+        font-size: 3rem;
+        font-weight: 600;
+    }
+
+    p {
+        font-size: 1rem;
+        color: #848383;
+        text-align: center;
+    }
+
+    &::after {
+        content: " ";
+        position: absolute;
+        width: 6%;
+        height: 5px;
+        bottom: 40px;
+        background-color: #0078ff;
+        left: 50%;
+        transform: translateX(-50%);
+        color: #0078ff;
+
+    }
+}
+
+/* *===========|>carousel */
+/* .c {
+    background-size: cover;
+} */
+
+.vh-75 {
+    height: 75vh;
+}
+
+/* *===========|>blog */
+.BLOG .card-body::after {
+    content: "WEB DESIGN";
+    position: absolute;
+    color: #fff;
+    font-size: smaller;
+    background-color: #0078ff;
+    padding-inline: .6rem;
+    padding-block: .3rem;
+    border-radius: 10px;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.contect {
+    .icons li {
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        border: solid 3px #0078ff;
+    }
+
+    .sec-titel {
+
+        padding: 40px;
+        position: relative;
+        /* background-color: #c63838; */
+
+        h2 {
+            font-size: 2rem;
+            font-weight: 500;
+        }
+
+        p {
+            font-size: 1rem;
+            color: #848383;
+            text-align: center;
+        }
+
+        &::after {
+            content: " ";
+            position: absolute;
+            width: 95px;
+            height: 5px;
+            bottom: 40px;
+            background-color: #0078ff;
+            left: 90px;
+
+            color: #0078ff;
+
+        }
+    }
+}
